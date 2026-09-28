@@ -1,0 +1,1155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fun with Loons Events & Decoration | Pune</title>
+
+    <meta name="description"
+          content="Fun with Loons Events and Decoration - Beautiful, creative and budget-friendly event decoration services in Pune and Pimpri-Chinchwad.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #fff;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        /* ================= NAVBAR ================= */
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(255,255,255,0.96);
+            backdrop-filter: blur(12px);
+            box-shadow: 0 3px 20px rgba(0,0,0,0.08);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: auto;
+            height: 75px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 25px;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: 800;
+            color: #e91e63;
+        }
+
+        .logo span {
+            color: #7b1fa2;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 28px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #e91e63;
+        }
+
+        .menu-btn {
+            display: none;
+            font-size: 28px;
+            cursor: pointer;
+        }
+
+        /* ================= HERO ================= */
+
+        .hero {
+            min-height: 100vh;
+            padding: 130px 25px 70px;
+            display: flex;
+            align-items: center;
+            background:
+                linear-gradient(rgba(78, 18, 82, 0.68), rgba(221, 28, 103, 0.65)),
+                url("https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=2000&q=85")
+                center/cover;
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 1150px;
+            width: 100%;
+            margin: auto;
+        }
+
+        .hero-text {
+            max-width: 720px;
+        }
+
+        .hero small {
+            display: inline-block;
+            background: rgba(255,255,255,0.15);
+            border: 1px solid rgba(255,255,255,0.4);
+            padding: 8px 18px;
+            border-radius: 50px;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: clamp(42px, 7vw, 80px);
+            line-height: 1.05;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 span {
+            color: #ffd54f;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 35px;
+            max-width: 650px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 28px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background: #ffca28;
+            color: #35103c;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        .btn-light {
+            border: 2px solid white;
+            color: white;
+        }
+
+        .btn-light:hover {
+            background: white;
+            color: #7b1fa2;
+        }
+
+        /* ================= GENERAL ================= */
+
+        section {
+            padding: 90px 25px;
+        }
+
+        .container {
+            max-width: 1150px;
+            margin: auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 55px;
+        }
+
+        .section-title span {
+            color: #e91e63;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 14px;
+        }
+
+        .section-title h2 {
+            font-size: 42px;
+            margin-top: 8px;
+            color: #32103d;
+        }
+
+        .section-title p {
+            max-width: 650px;
+            margin: 12px auto;
+            color: #666;
+        }
+
+        /* ================= ABOUT ================= */
+
+        .about {
+            background: #fff8fc;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-image {
+            min-height: 430px;
+            border-radius: 25px;
+            background:
+                url("https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=1200&q=85")
+                center/cover;
+            box-shadow: 0 20px 50px rgba(110,30,100,0.18);
+        }
+
+        .about-text h3 {
+            font-size: 35px;
+            color: #381040;
+            margin-bottom: 18px;
+        }
+
+        .about-text p {
+            color: #666;
+            margin-bottom: 18px;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .feature {
+            padding: 18px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+        }
+
+        .feature strong {
+            color: #e91e63;
+        }
+
+        /* ================= SERVICES ================= */
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .service-card {
+            padding: 35px 25px;
+            border-radius: 22px;
+            background: white;
+            border: 1px solid #eee;
+            text-align: center;
+            transition: 0.35s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 18px 40px rgba(120,30,100,0.15);
+        }
+
+        .service-icon {
+            width: 75px;
+            height: 75px;
+            margin: auto auto 20px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 35px;
+            background: #fff0f7;
+        }
+
+        .service-card h3 {
+            color: #381040;
+            margin-bottom: 10px;
+        }
+
+        .service-card p {
+            color: #666;
+        }
+
+        /* ================= EVENTS ================= */
+
+        .events {
+            background: #faf5ff;
+        }
+
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+        }
+
+        .event-card {
+            min-height: 250px;
+            border-radius: 20px;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .event-card:nth-child(1) {
+            background-image: url("https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=800&q=80");
+        }
+
+        .event-card:nth-child(2) {
+            background-image: url("https://images.unsplash.com/photo-1606800052052-a08af7148866?auto=format&fit=crop&w=800&q=80");
+        }
+
+        .event-card:nth-child(3) {
+            background-image: url("https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=800&q=80");
+        }
+
+        .event-card:nth-child(4) {
+            background-image: url("https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80");
+        }
+
+        .event-card::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(transparent, rgba(30,0,30,0.85));
+        }
+
+        .event-name {
+            position: relative;
+            z-index: 1;
+            color: white;
+            padding: 20px;
+            font-size: 20px;
+            font-weight: 800;
+        }
+
+        /* ================= WHY US ================= */
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 25px;
+        }
+
+        .why-card {
+            text-align: center;
+            padding: 35px 20px;
+        }
+
+        .why-card .number {
+            font-size: 45px;
+            font-weight: 900;
+            color: #e91e63;
+        }
+
+        .why-card h3 {
+            color: #381040;
+            margin: 10px 0;
+        }
+
+        .why-card p {
+            color: #666;
+        }
+
+        /* ================= REVIEWS ================= */
+
+        .reviews {
+            background: #fff8fc;
+        }
+
+        .review-grid {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 22px;
+        }
+
+        .review-card {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+        }
+
+        .stars {
+            color: #ffb300;
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        .review-card p {
+            color: #555;
+            font-style: italic;
+            margin-bottom: 18px;
+        }
+
+        .review-card strong {
+            color: #381040;
+        }
+
+        /* ================= CONTACT ================= */
+
+        .contact {
+            background:
+                linear-gradient(135deg,#42124c,#e91e63);
+            color: white;
+        }
+
+        .contact .section-title h2,
+        .contact .section-title p {
+            color: white;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .contact-card {
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 20px;
+            padding: 30px;
+        }
+
+        .contact-item {
+            margin-bottom: 22px;
+        }
+
+        .contact-item strong {
+            display: block;
+            margin-bottom: 5px;
+            color: #ffd54f;
+        }
+
+        .contact-item a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .map {
+            width: 100%;
+            min-height: 350px;
+            border: 0;
+            border-radius: 20px;
+        }
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            background: #210b27;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        footer p {
+            color: #ccc;
+        }
+
+        .footer-logo {
+            font-size: 25px;
+            font-weight: 800;
+            color: #ffca28;
+            margin-bottom: 8px;
+        }
+
+        /* ================= FLOATING WHATSAPP ================= */
+
+        .whatsapp {
+            position: fixed;
+            right: 22px;
+            bottom: 22px;
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 30px;
+            text-decoration: none;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+            z-index: 999;
+        }
+
+        /* ================= RESPONSIVE ================= */
+
+        @media(max-width:900px) {
+
+            .nav-links {
+                position: absolute;
+                top: 75px;
+                left: 0;
+                width: 100%;
+                background: white;
+                flex-direction: column;
+                text-align: center;
+                padding: 25px;
+                display: none;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .menu-btn {
+                display: block;
+            }
+
+            .about-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .events-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .review-grid,
+            .why-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media(max-width:600px) {
+
+            section {
+                padding: 70px 18px;
+            }
+
+            .hero {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            .hero h1 {
+                font-size: 45px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+
+            .section-title h2 {
+                font-size: 32px;
+            }
+
+            .services-grid,
+            .events-grid,
+            .features {
+                grid-template-columns: 1fr;
+            }
+
+            .about-image {
+                min-height: 300px;
+            }
+
+            .nav-container {
+                padding: 0 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<nav>
+    <div class="nav-container">
+
+        <div class="logo">
+            Fun with <span>Loons</span>
+        </div>
+
+        <div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+    </div>
+</nav>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <div class="hero-text">
+
+            <small>✨ Event Management & Decoration • Pune</small>
+
+            <h1>
+                We Create Your
+                <span>Imagination.</span>
+            </h1>
+
+            <p>
+                Beautiful decorations, memorable celebrations and
+                budget-friendly event solutions for every special occasion.
+            </p>
+
+            <div class="buttons">
+
+                <a href="#contact" class="btn btn-primary">
+                    Book Your Event
+                </a>
+
+                <a href="tel:08080073763" class="btn btn-light">
+                    📞 Call Us
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section class="about" id="about">
+
+    <div class="container">
+
+        <div class="section-title">
+            <span>About Us</span>
+            <h2>Making Every Moment Special</h2>
+            <p>
+                Creative event decoration and management services
+                designed around your imagination.
+            </p>
+        </div>
+
+        <div class="about-grid">
+
+            <div class="about-image"></div>
+
+            <div class="about-text">
+
+                <h3>Fun with Loons Events & Decoration</h3>
+
+                <p>
+                    We create beautiful and memorable experiences for
+                    birthdays, baby celebrations, housewarmings,
+                    engagements and other special occasions.
+                </p>
+
+                <p>
+                    Our team focuses on creative decoration,
+                    quality service and budget-friendly options.
+                </p>
+
+                <div class="features">
+
+                    <div class="feature">
+                        🎈 <strong>Creative Decor</strong>
+                        <br>
+                        Unique themes and decorations.
+                    </div>
+
+                    <div class="feature">
+                        💰 <strong>Budget Friendly</strong>
+                        <br>
+                        Packages for different budgets.
+                    </div>
+
+                    <div class="feature">
+                        ⏱️ <strong>On-Time Service</strong>
+                        <br>
+                        Professional event setup.
+                    </div>
+
+                    <div class="feature">
+                        ❤️ <strong>Customer Focus</strong>
+                        <br>
+                        Your celebration, your vision.
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SERVICES ================= -->
+
+<section id="services">
+
+    <div class="container">
+
+        <div class="section-title">
+            <span>Our Services</span>
+            <h2>What We Do</h2>
+            <p>
+                Complete decoration and event management solutions
+                for your important occasions.
+            </p>
+        </div>
+
+        <div class="services-grid">
+
+            <div class="service-card">
+
+                <div class="service-icon">🎂</div>
+
+                <h3>Birthday Decoration</h3>
+
+                <p>
+                    Beautiful birthday themes, balloon decorations,
+                    backdrops and customized setups.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">👶</div>
+
+                <h3>Welcome Baby</h3>
+
+                <p>
+                    Cute and memorable welcome-baby decorations
+                    designed for your family celebration.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">🏠</div>
+
+                <h3>Griha Pravesh</h3>
+
+                <p>
+                    Traditional and modern decoration for your
+                    housewarming ceremony.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">💍</div>
+
+                <h3>Engagement</h3>
+
+                <p>
+                    Elegant stage, backdrop and venue decoration
+                    for your engagement celebration.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">🎉</div>
+
+                <h3>Party Decoration</h3>
+
+                <p>
+                    Creative decorations for private parties,
+                    celebrations and special events.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">🏛️</div>
+
+                <h3>Banquet Halls</h3>
+
+                <p>
+                    Event spaces and decoration options available
+                    in budget-friendly packages.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= EVENTS ================= -->
+
+<section class="events" id="events">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>Celebrations</span>
+
+            <h2>Events We Decorate</h2>
+
+            <p>
+                From intimate family celebrations to bigger events,
+                we help create memorable experiences.
+            </p>
+
+        </div>
+
+        <div class="events-grid">
+
+            <div class="event-card">
+                <div class="event-name">Birthday Parties</div>
+            </div>
+
+            <div class="event-card">
+                <div class="event-name">Welcome Baby</div>
+            </div>
+
+            <div class="event-card">
+                <div class="event-name">Housewarming</div>
+            </div>
+
+            <div class="event-card">
+                <div class="event-name">Engagements</div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= WHY US ================= -->
+
+<section>
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>Why Choose Us</span>
+
+            <h2>Your Celebration Matters</h2>
+
+        </div>
+
+        <div class="why-grid">
+
+            <div class="why-card">
+
+                <div class="number">01</div>
+
+                <h3>Creative Ideas</h3>
+
+                <p>
+                    We turn your ideas into attractive event
+                    decoration concepts.
+                </p>
+
+            </div>
+
+            <div class="why-card">
+
+                <div class="number">02</div>
+
+                <h3>Quality Service</h3>
+
+                <p>
+                    Our team focuses on decoration quality and
+                    professional event execution.
+                </p>
+
+            </div>
+
+            <div class="why-card">
+
+                <div class="number">03</div>
+
+                <h3>Budget Friendly</h3>
+
+                <p>
+                    We provide decoration and event solutions
+                    for different budgets.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= REVIEWS ================= -->
+
+<section class="reviews" id="reviews">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>Google Reviews</span>
+
+            <h2>What Customers Say</h2>
+
+            <p>
+                Rated <strong>5.0 ⭐</strong> on Google based on
+                the business information provided.
+            </p>
+
+        </div>
+
+        <div class="review-grid">
+
+            <div class="review-card">
+
+                <div class="stars">★★★★★</div>
+
+                <p>
+                    "Done everything beautiful and finished their
+                    work in time....and quality!"
+                </p>
+
+                <strong>— Aman Singh</strong>
+
+            </div>
+
+
+            <div class="review-card">
+
+                <div class="stars">★★★★★</div>
+
+                <p>
+                    "Good Management and Best service in PCMC."
+                </p>
+
+                <strong>— Donald Triumph</strong>
+
+            </div>
+
+
+            <div class="review-card">
+
+                <div class="stars">★★★★★</div>
+
+                <p>
+                    "Good Behaviour And Good Support From Team
+                    Members And Owners..."
+                </p>
+
+                <strong>— Vaibhav Shegade</strong>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section class="contact" id="contact">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>Contact Us</span>
+
+            <h2>Let's Plan Your Celebration</h2>
+
+            <p>
+                Contact us to discuss your event, decoration
+                requirements and budget.
+            </p>
+
+        </div>
+
+        <div class="contact-grid">
+
+            <div class="contact-card">
+
+                <div class="contact-item">
+
+                    <strong>📍 Address</strong>
+
+                    Kunal Icon Road, Near Kunjir Chowk,
+                    Pune, Maharashtra 411027
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <strong>📞 Phone</strong>
+
+                    <a href="tel:08080073763">
+                        080800 73763
+                    </a>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <strong>🕐 Business Hours</strong>
+
+                    Open 24 Hours
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <strong>🎉 Services</strong>
+
+                    Event Management • Decoration •
+                    Birthday • Welcome Baby • Griha Pravesh •
+                    Housewarming • Parties
+
+                </div>
+
+                <br>
+
+                <a
+                    href="tel:08080073763"
+                    class="btn btn-primary"
+                >
+                    Call Now
+                </a>
+
+            </div>
+
+
+            <div>
+
+                <iframe
+                    class="map"
+                    src="https://www.google.com/maps?q=Kunal%20Icon%20Road%20Pune%20411027&output=embed"
+                    loading="lazy">
+                </iframe>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-logo">
+        Fun with Loons
+    </div>
+
+    <p>
+        Events & Decoration • Pune
+    </p>
+
+    <p>
+        © 2026 Fun with Loons Events and Decoration.
+        All Rights Reserved.
+    </p>
+
+</footer>
+
+
+<!-- ================= WHATSAPP ================= -->
+
+<a
+    class="whatsapp"
+    href="https://wa.me/918080073763?text=Hello%20Fun%20with%20Loons,%20I%20want%20to%20know%20about%20your%20event%20decoration%20services."
+    target="_blank"
+    aria-label="WhatsApp"
+>
+    ☎
+</a>
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script>
+
+    function toggleMenu() {
+
+        const menu = document.getElementById("navLinks");
+
+        menu.classList.toggle("active");
+
+    }
+
+
+    document.querySelectorAll(".nav-links a").forEach(link => {
+
+        link.addEventListener("click", () => {
+
+            document
+                .getElementById("navLinks")
+                .classList.remove("active");
+
+        });
+
+    });
+
+</script>
+
+</body>
+</html>
